@@ -1,0 +1,95 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Allow vertical stacking of elements */
+    align-items: center; /* Center elements horizontally */
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6A0572, #D74177, #FF6B6B, #FFA500);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #333;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space between heading and container */
+    color: #6A0572; /* Heading color */
+}
+
+.container {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    max-width: 90%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.03);
+}
+
+/* Details Section Alignment */
+.details {
+    margin-bottom: 20px;
+}
+
+.details h3 {
+    margin: 10px 0 5px; /* Margin for labels */
+    font-size: 18px;
+}
+
+.details p {
+    margin: 0 0 15px; /* Margin for content */
+    font-size: 16px;
+    text-align: left; /* Align text to the left */
+}
+
+/* Dashboard Action Links */
+.action-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.action-link {
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    text-align: center;
+    transition: background 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+
+/* Individual Link Colors */
+.action-link.update {
+    background-color: #FFA500;
+}
+
+/* Hover Effects */
+.action-link:hover {
+    transform: translateY(-2px);
+}
+
+.action-link.update:hover {
+    background-color: #FF8C00;
+}

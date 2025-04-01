@@ -1,0 +1,94 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6A0572, #D74177, #FF6B6B, #FFA500);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #333;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    max-width: 90%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.03);
+}
+
+h1,h2, h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #6A0572;
+}
+
+/* Dashboard Action Links */
+.action-links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.action-link {
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    text-align: center;
+    transition: background 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+
+/* Individual Link Colors */
+.action-link.update {
+    background-color: #FFA500;
+}
+
+.action-link.details {
+    background-color: #6A0572;
+}
+
+.action-link.delete {
+    background-color: #D74177;
+}
+
+/* Hover Effects */
+.action-link:hover {
+    transform: translateY(-2px);
+}
+
+.action-link.update:hover {
+    background-color: #FF8C00;
+}
+
+.action-link.details:hover {
+    background-color: #8A2BE2;
+}
+
+.action-link.delete:hover {
+    background-color: #FF4500;
+}
